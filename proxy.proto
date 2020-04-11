@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package proxyPb;
-option go_package = "proxypb";
+option go_package = "testproto";
 
 message GetProxyRequest{
   int32 account_id = 1;
