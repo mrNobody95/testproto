@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package proxyPb;
+option go_package = "proxypb";
+
+message GetProxyRequest{
+  int32 account_id = 1;
+}
+
+message GetProxyResponse{
+  string url = 1;
+}
+
+message CreateAccountRequest{
+  int32 accountId = 1;
+  string country_code = 2;
+  string url = 3;
+}
+
+message CreateAccountResponse{
+  string url = 1;
+}
+
+service ProxyService{
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse) {};
+  rpc GetProxy(GetProxyRequest) returns (GetProxyResponse) {};
+}
+

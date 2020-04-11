@@ -1,0 +1,1 @@
+protoc proxy.proto --go_out=plugins=grpc:.
